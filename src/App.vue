@@ -1,19 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <DecreaseBtn />
+    <CounterView />
+    <IncreaseBtn />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CounterView from "./components/CounterView.vue";
+import DecreaseBtn from "./components/DecraseBtn.vue";
+import IncreaseBtn from "./components/IncraseBtn.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    CounterView,
+    DecreaseBtn,
+    IncreaseBtn,
+  },
+};
 </script>
 
 <style>
@@ -24,5 +29,21 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+button {
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: cornflowerblue;
+  border: 2px solid transparent;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+button:hover {
+  transition: all 0.5s ease-in-out;
+  background: none;
+  border: 2px solid cornflowerblue;
+  color: cornflowerblue;
 }
 </style>
